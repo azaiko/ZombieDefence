@@ -19,7 +19,7 @@ public class Attack : MonoBehaviour
 
     void FixedUpdate()
     {
-        UpdateZombieList(); // Обновляем список зомби, если их количество изменилось
+        UpdateZombieList();
         FindNearestEnemy();
 
         if (currentTarget != null)
@@ -67,7 +67,7 @@ public class Attack : MonoBehaviour
         Vector3 direction = currentTarget.position - transform.position;
 
         // Убираем вертикальную составляющую, чтобы вращение происходило только вокруг оси Y
-        direction.y = 0;
+        
 
         if (direction.magnitude < 0.1f)
         {
@@ -78,31 +78,11 @@ public class Attack : MonoBehaviour
         // Рассчитываем целевую ориентацию (только горизонтально)
         Quaternion targetRotation = Quaternion.LookRotation(direction);
 
-        // Плавно поворачиваем турель
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+        transform.rotation = targetRotation * Quaternion.Euler(0f, 270f, 0f);
 
         Debug.Log($"Turret rotating towards {currentTarget.name}");
     }
-    // void RotateTurret()
-    // {
-    //     if (currentTarget == null) return;
-    //
-    //     // Рассчитываем направление к цели
-    //     Vector3 direction = currentTarget.position - transform.position;
-    //     direction.y = 0; // Убираем вертикальную составляющую
-    //
-    //     if (direction.magnitude < 0.1f)
-    //     {
-    //         Debug.LogWarning("Target is too close or invalid.");
-    //         return;
-    //     }
-    //
-    //     // Рассчитываем целевую ориентацию
-    //     Quaternion targetRotation = Quaternion.LookRotation(direction);
-    //
-    //     // Плавно поворачиваем турель
-    //     transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
-    // }
+
 
     // void AttackEnemy()
     // {

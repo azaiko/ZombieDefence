@@ -32,7 +32,7 @@ public class TurretSpawn : MonoBehaviour
                     }
                 }
 
-                if (canSpawn)  
+                if (canSpawn)
                 {
                     Instantiate(TurretPrefab, hit.point, Quaternion.identity);  
                 }
