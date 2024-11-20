@@ -11,7 +11,7 @@ public class ZombieSpawn : MonoBehaviour
     private float _timer;
     public ParticleSystem spawn;
 
-    private int currentEnemyCount = 0;  // Счётчик заспавненных зомби
+    private int currentEnemyCount = 0;  
 
     void Start()
     {
@@ -28,26 +28,25 @@ public class ZombieSpawn : MonoBehaviour
 
             if (currentEnemyCount < maxEnemy)
             {
-                // Если количество зомби меньше максимального, спавним нового
+                
                 spawn.Play();
                 Instantiate(enemy, Random.insideUnitSphere * distance + transform.position, Quaternion.identity, transform);
-                currentEnemyCount++;  // Увеличиваем счётчик заспавненных зомби
+                currentEnemyCount++;  
             }
             else
             {
-                // Если заспавнено максимально возможное количество, ставим анимацию на паузу
+                
                 spawn.Pause();
             }
         }
     }
 
-    // Вы можете вызвать этот метод, чтобы уменьшить количество зомби (например, при их уничтожении)
+
     public void OnZombieDeath()
     {
-        currentEnemyCount--;  // Уменьшаем счётчик при смерти зомби
+        currentEnemyCount--;  
         if (currentEnemyCount < maxEnemy)
         {
-            // Если количество зомби меньше максимума, возобновляем анимацию
             spawn.Play();
         }
     }
