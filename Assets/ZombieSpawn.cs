@@ -11,7 +11,7 @@ public class ZombieSpawn : MonoBehaviour
     private float _timer;
     public ParticleSystem spawn;
 
-    private int currentEnemyCount = 0;  
+    public static int currentEnemyCount = 0;  
 
     void Start()
     {
@@ -40,14 +40,5 @@ public class ZombieSpawn : MonoBehaviour
             }
         }
     }
-
-
-    public void OnZombieDeath()
-    {
-        currentEnemyCount--;  
-        if (currentEnemyCount < maxEnemy)
-        {
-            spawn.Play();
-        }
-    }
+    
 }

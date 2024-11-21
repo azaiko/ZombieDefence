@@ -25,7 +25,7 @@ public class TurretSpawn : MonoBehaviour
                 
                 foreach (Collider collider in colliders)
                 {
-                    if (collider.gameObject.CompareTag("Turret"))  
+                    if (collider.gameObject.CompareTag("Turret") || collider.gameObject.CompareTag("TownHall"))  
                     {
                         canSpawn = false;  
                         break;

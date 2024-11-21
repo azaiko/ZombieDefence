@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public float attackRange = 10f;  // Радиус действия турели
-    public float attackDamage = 10f; // Урон от атаки
+    public int attackDamage = 10; // Урон от атаки
     public float attackRate = 1f;    // Частота атак (время между выстрелами)
 
     private Transform currentTarget; // Текущая цель (зомби)
@@ -15,6 +15,7 @@ public class Attack : MonoBehaviour
     void Start()
     {
         UpdateZombieList();
+        
     }
 
     void FixedUpdate()
@@ -25,7 +26,7 @@ public class Attack : MonoBehaviour
         if (currentTarget != null)
         {
             RotateTurret();
-            //AttackEnemy();
+            AttackEnemy();
         }
     }
 
@@ -84,22 +85,21 @@ public class Attack : MonoBehaviour
     }
 
 
-    // void AttackEnemy()
-    // {
-    //     if (currentTarget == null) return;
-    //
-    //     if (Time.time - lastAttackTime >= 1f / attackRate)
-    //     {
-    //         Debug.Log($"Turret attacking enemy: {currentTarget.name} with damage {attackDamage}");
-    //
-    //         // Реализуйте нанесение урона врагу
-    //         Zombie zombie = currentTarget.GetComponent<Zombie>();
-    //         if (zombie != null)
-    //         {
-    //             zombie.TakeDamage(attackDamage);
-    //         }
-    //
-    //         lastAttackTime = Time.time;
-    //     }
-    // }
+    void AttackEnemy()
+    {
+        if (currentTarget == null) return;
+    
+        if (Time.time - lastAttackTime >= 1f / attackRate)
+        {
+            Debug.Log($"Turret attacking enemy: {currentTarget.name} with damage {attackDamage}");
+            
+            TakeDamage enemy = currentTarget.GetComponent<TakeDamage>();
+            if (enemy != null)
+            {
+                enemy.GetDamage(attackDamage);
+            }
+            
+            lastAttackTime = Time.time;
+        }
+    }
 }

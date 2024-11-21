@@ -352,6 +352,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Attack.cs"
+"Assets/CastleAttack.cs"
 "Assets/Control.cs"
 "Assets/Sci Fi Assets/PostProcessing/Runtime/Attributes/GetSetAttribute.cs"
 "Assets/Sci Fi Assets/PostProcessing/Runtime/Attributes/MinAttribute.cs"
@@ -401,7 +402,10 @@
 "Assets/Sci Fi Assets/Simple SciFi Gun Turret Set/Scripts/CameraMouseDrag.cs"
 "Assets/Sci Fi Assets/Simple SciFi Gun Turret Set/Scripts/CameraMouseRotate.cs"
 "Assets/Sci Fi Assets/Simple SciFi Gun Turret Set/Scripts/MoveMe.cs"
+"Assets/TakeDamage.cs"
 "Assets/TurretSpawn.cs"
+"Assets/Upgrade.cs"
+"Assets/ZombieAttack.cs"
 "Assets/ZombieSpawn.cs"
 -langversion:9.0
 

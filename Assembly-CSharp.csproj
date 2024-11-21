@@ -41,13 +41,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\TakeDamage.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\PostProcessingProfile.cs" />
+     <Compile Include="Assets\CastleAttack.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\PostProcessingContext.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+     <Compile Include="Assets\ZombieAttack.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\BloomComponent.cs" />
      <Compile Include="Assets\Attack.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\DitheringComponent.cs" />
@@ -80,6 +83,7 @@
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\UserLutComponent.cs" />
      <Compile Include="Assets\ZombieSpawn.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
+     <Compile Include="Assets\Upgrade.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
      <Compile Include="Assets\Sci Fi Assets\Simple SciFi Gun Turret Set\Scripts\MoveMe.cs" />
@@ -94,15 +98,19 @@
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Models" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Texture" />
      <Folder Include="Assets\UI Toolkit" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <Folder Include="Assets\Zombie" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Textures\Lens Dirt" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Prefab\Objects" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Sword Trails\Ice" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Models\Materials" />
      <Folder Include="Assets\Sci Fi Assets\Simple SciFi Gun Turret Set\Textures" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\GrainGen.shader" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Prefab\Castles\HexagonCastle" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Misc" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
@@ -119,10 +127,12 @@
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Decorative elements\Arts" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Textures" />
      <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Models\Castles\SmallCastle" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Resources" />
      <Folder Include="Assets\Zombie\Prefabs" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Sword Trails\Fire" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Models\Road" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Walls" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Utilities\CustomMotionTexture\Textures" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
@@ -130,6 +140,7 @@
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
      <Folder Include="Assets\Sci Fi Assets" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Nature" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Material" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Liquids" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Editor Resources" />
      <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR.cginc" />
@@ -139,9 +150,11 @@
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\TAA.cginc" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Utilities\CustomMotionTexture\Materials" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Prefab\RoadConstructor" />
      <Folder Include="Assets\UI Toolkit\UnityThemes" />
      <Folder Include="Assets\Sci Fi Assets\Simple SciFi Gun Turret Set\Additional Assets" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
+     <Folder Include="Assets\Hyper casual cartoon castles" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Fire" />
@@ -160,7 +173,9 @@
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Utilities" />
      <Folder Include="Assets\Sci Fi Assets\Simple SciFi Gun Turret Set\Scripts" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Textures\Spectral LUTs" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Models\Objects" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Sword Trails\Plain" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Models\Castles" />
      <Folder Include="Assets\Zombie\Materials" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Textures" />
      <Folder Include="Assets\JMO Assets" />
@@ -182,9 +197,12 @@
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Models" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Doors" />
      <Folder Include="Assets\Sci Fi Assets\Simple SciFi Gun Turret Set" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Prefab\Castles" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Explosions" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Corridors" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Prefab\Castles\EvilCastle" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Models\Castles\HexagonCastle" />
      <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\_Make your own text effect.txt" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Ice" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
@@ -201,6 +219,7 @@
      <None Include="Assets\Sci Fi Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Runtime" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Utilities\CustomMotionTexture" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Models\Castles\BigCstle" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Electric" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\Common.cginc" />
@@ -212,6 +231,7 @@
      <None Include="Assets\Sci Fi Assets\Simple SciFi Gun Turret Set\Read Me.txt" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\TAA.shader" />
      <Folder Include="Assets\Sci Fi Assets\Simple SciFi Gun Turret Set\Additional Assets\Materials" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Prefab\Castles\SmallCastle" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Stairs" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\Blit.shader" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
@@ -233,6 +253,9 @@
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Decorative elements" />
      <Folder Include="Assets\Zombie\FBXs" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Models\Castles\EvilCastle" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Prefab\Castles\BigCastle" />
+     <Folder Include="Assets\Hyper casual cartoon castles\Prefab" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Editor Resources\UI" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Decorative elements\Tables" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Utilities\CustomMotionTexture\Models" />
