@@ -1,6 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using UnityEngine.UI;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 public class TakeDamage : MonoBehaviour
 {
@@ -10,12 +15,27 @@ public class TakeDamage : MonoBehaviour
     
     [SerializeField] ParticleSystem damageParticles;
     [SerializeField] ParticleSystem deathParticles;
+    
+    [SerializeField] Canvas canvas;
+    [SerializeField] Slider healthSlider;
+
+    void Start()
+    {
+
+        if (healthSlider)
+        {
+            healthSlider.maxValue = health;
+            healthSlider.value = health;
+            healthSlider.minValue = 0;
+        }
+    }
 
     public void GetDamage(int damage)
     {
         health -= damage;
-        damageParticles.Play();
+        // damageParticles.Play();
         Debug.Log(health);
+        if(healthSlider) healthSlider.value = health;
         if (health <= 0)
         {
             Die();
@@ -25,7 +45,7 @@ public class TakeDamage : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
-        deathParticles.Play();
+        
         Upgrade.score += deathScore;
         ZombieSpawn.currentEnemyCount--;
     }
