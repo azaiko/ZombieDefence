@@ -2048,7 +2048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577d229b10fd2e347815281d523dd7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  speed: 10
   spot: 0
   next: 1
   spots:
@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  deathScore: 10
+  deathScore: 1
   damageParticles: {fileID: 8094447750892897950}
   deathParticles: {fileID: 4096739188853474590}
   canvas: {fileID: 5853099221240844860}

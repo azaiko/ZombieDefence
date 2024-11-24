@@ -17,7 +17,7 @@ public class Attack : MonoBehaviour
         UpdateZombieList();
         
     }
-
+    
     void FixedUpdate()
     {
         UpdateZombieList();
@@ -81,7 +81,7 @@ public class Attack : MonoBehaviour
 
         transform.rotation = targetRotation * Quaternion.Euler(0f, 270f, 0f);
 
-        Debug.Log($"Turret rotating towards {currentTarget.name}");
+        //Debug.Log($"Turret rotating towards {currentTarget.name}");
     }
 
 
@@ -91,7 +91,7 @@ public class Attack : MonoBehaviour
     
         if (Time.time - lastAttackTime >= 1f / attackRate)
         {
-            Debug.Log($"Turret attacking enemy: {currentTarget.name} with damage {attackDamage}");
+            //Debug.Log($"Turret attacking enemy: {currentTarget.name} with damage {attackDamage}");
             
             TakeDamage enemy = currentTarget.GetComponent<TakeDamage>();
             if (enemy != null)

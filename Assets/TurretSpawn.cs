@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TurretSpawn : MonoBehaviour
 {
@@ -8,15 +10,31 @@ public class TurretSpawn : MonoBehaviour
     public GameObject TurretPrefab;
 
     [SerializeField]
-    private float spawnRadius = 2f; 
+    private float spawnRadius = 2f;
+
+    private int fturretCost = 10;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))  
+        if (EventSystem.current.IsPointerOverGameObject() || Upgrade.canUpgrade)
         {
+            return; 
+        }
+        if (Input.GetMouseButtonDown(0) && !Upgrade.canUpgrade) SpawnTurret();
+        
+        
+        
+    }
+
+    void SpawnTurret()
+    {
+        
+            //Debug.Log(Upgrade.canUpgrade);
+            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
+                
                 
                 Collider[] colliders = Physics.OverlapSphere(hit.point, spawnRadius);
 
@@ -34,13 +52,18 @@ public class TurretSpawn : MonoBehaviour
 
                 if (canSpawn)
                 {
-                    Instantiate(TurretPrefab, hit.point, Quaternion.identity);  
+                    if (fturretCost <= Upgrade.score)
+                    {
+                        GameObject objectToCreate = Instantiate(TurretPrefab, hit.point, Quaternion.identity);
+                        objectToCreate.name = "Turret 1a";
+                        Upgrade.score -= fturretCost;
+                    }
+                      
                 }
                 else
                 {
-                    Debug.Log("Турель не может быть размещена в этой области, так как уже есть турель.");
+                    Debug.Log("Турель не может быть размещена в этой области, так как уже есть турель");
                 }
             }
         }
-    }
 }

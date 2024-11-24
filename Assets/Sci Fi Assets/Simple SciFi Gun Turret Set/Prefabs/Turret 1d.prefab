@@ -175,9 +175,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013081111600}
+  - component: {fileID: -7897016094838871414}
+  - component: {fileID: 4291416616215180382}
   m_Layer: 0
   m_Name: Turret 1d
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,6 +200,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &-7897016094838871414
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011222192992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 5, z: 10}
+  m_Center: {x: 0, y: 5, z: 0}
+--- !u!114 &4291416616215180382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011222192992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d448384334fc04db43f46a53f85aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1000
+  attackDamage: 25
+  attackRate: 0.7
 --- !u!1 &1000012439138410
 GameObject:
   m_ObjectHideFlags: 0

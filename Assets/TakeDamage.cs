@@ -28,13 +28,15 @@ public class TakeDamage : MonoBehaviour
             healthSlider.value = health;
             healthSlider.minValue = 0;
         }
+        canvas.enabled = false;
     }
 
     public void GetDamage(int damage)
     {
+        canvas.enabled = true;
         health -= damage;
         // damageParticles.Play();
-        Debug.Log(health);
+        //Debug.Log(health);
         if(healthSlider) healthSlider.value = health;
         if (health <= 0)
         {
