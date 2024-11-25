@@ -24,21 +24,33 @@ public class ZombieSpawn : MonoBehaviour
 
         if (_timer <= 0)
         {
-            _timer = timeSpawn;
-
-            if (currentEnemyCount < maxEnemy)
-            {
-                
-                spawn.Play();
-                Instantiate(enemy, Random.insideUnitSphere * distance + transform.position, Quaternion.identity, transform);
-                currentEnemyCount++;  
-            }
-            else
-            {
-                
-                spawn.Pause();
-            }
+            Spawner();
         }
+    }
+
+    void Spawner()
+    {
+        _timer = timeSpawn;
+
+        if (currentEnemyCount < maxEnemy)
+        {
+                
+            spawn.Play();
+            Instantiate(enemy, Random.insideUnitSphere * distance + transform.position, Quaternion.identity, transform);
+            currentEnemyCount++;  
+        }
+        else if(currentEnemyCount == maxEnemy && Attack.zombies.Count == 0)
+        {
+                
+            SpawnUpgrade();
+        }
+    }
+
+    void SpawnUpgrade()
+    {
+        currentEnemyCount = 0;
+        maxEnemy += 5;
+        timeSpawn -= 0.1f;
     }
     
 }

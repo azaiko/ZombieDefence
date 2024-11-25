@@ -30,31 +30,36 @@ public class TurretSpawn : MonoBehaviour
     {
         
             //Debug.Log(Upgrade.canUpgrade);
-            
+            bool canSpawn = false;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
                 
-                
-                Collider[] colliders = Physics.OverlapSphere(hit.point, spawnRadius);
-
-                bool canSpawn = true;
-
-                
-                foreach (Collider collider in colliders)
+                GameObject hitObject = hit.collider.gameObject;
+                if (hitObject.tag == "TurretFloor")
                 {
-                    if (collider.gameObject.CompareTag("Turret") || collider.gameObject.CompareTag("TownHall"))  
+                    Collider[] colliders = Physics.OverlapSphere(hit.point, spawnRadius);
+
+                    canSpawn = true;
+
+                
+                    foreach (Collider collider in colliders)
                     {
-                        canSpawn = false;  
-                        break;
+                        if (collider.gameObject.CompareTag("Turret"))  
+                        {
+                            Debug.Log(collider.gameObject.tag + collider.gameObject.name);
+                            canSpawn = false;  
+                            break;
+                        }
                     }
                 }
+                
 
                 if (canSpawn)
                 {
                     if (fturretCost <= Upgrade.score)
                     {
-                        GameObject objectToCreate = Instantiate(TurretPrefab, hit.point, Quaternion.identity);
+                        GameObject objectToCreate = Instantiate(TurretPrefab, hitObject.transform.position, Quaternion.identity);
                         objectToCreate.name = "Turret 1a";
                         Upgrade.score -= fturretCost;
                     }
@@ -62,7 +67,7 @@ public class TurretSpawn : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Турель не может быть размещена в этой области, так как уже есть турель");
+                    Debug.Log("Турель не может быть размещена в этой области");
                 }
             }
         }

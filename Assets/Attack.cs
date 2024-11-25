@@ -10,7 +10,7 @@ public class Attack : MonoBehaviour
 
     private Transform currentTarget; // Текущая цель (зомби)
     private float lastAttackTime;    // Время последней атаки
-    private List<GameObject> zombies = new List<GameObject>();
+    public static List<GameObject> zombies = new List<GameObject>();
 
     void Start()
     {

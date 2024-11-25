@@ -9,6 +9,7 @@ TagManager:
   - Zombie
   - FxTemporaire
   - TownHall
+  - TurretFloor
   layers:
   - Default
   - TransparentFX

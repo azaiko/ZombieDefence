@@ -49,4 +49,5 @@ public class Control : MonoBehaviour
             spot += next;
         }
     }
+
 }

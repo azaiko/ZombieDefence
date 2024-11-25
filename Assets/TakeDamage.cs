@@ -49,6 +49,5 @@ public class TakeDamage : MonoBehaviour
         Destroy(gameObject);
         
         Upgrade.score += deathScore;
-        ZombieSpawn.currentEnemyCount--;
     }
 }
