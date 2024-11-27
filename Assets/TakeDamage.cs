@@ -9,18 +9,20 @@ using Vector3 = UnityEngine.Vector3;
 
 public class TakeDamage : MonoBehaviour
 {
-    public int health = 100;
+    public static int ghealth = 100;
+    public int health;
 
     public int deathScore = 10;
     
-    [SerializeField] ParticleSystem damageParticles;
-    [SerializeField] ParticleSystem deathParticles;
+    public ParticleSystem damageParticles;
+    public ParticleSystem deathParticles;
     
     [SerializeField] Canvas canvas;
     [SerializeField] Slider healthSlider;
 
     void Start()
     {
+        health = ghealth;
 
         if (healthSlider)
         {
@@ -31,12 +33,18 @@ public class TakeDamage : MonoBehaviour
         canvas.enabled = false;
     }
 
+    void Update()
+    {
+        if(ZombieSpawn.HealthUpgrade) UpgradeZombies();
+    }
+
     public void GetDamage(int damage)
     {
         canvas.enabled = true;
         health -= damage;
-        // damageParticles.Play();
-        //Debug.Log(health);
+        damageParticles.Play();
+        
+
         if(healthSlider) healthSlider.value = health;
         if (health <= 0)
         {
@@ -46,8 +54,22 @@ public class TakeDamage : MonoBehaviour
 
     public void Die()
     {
+        // deathParticles.transform.parent = null;
+        // deathParticles.Play();
+        // Destroy(deathParticles.gameObject, deathParticles.main.duration);
         Destroy(gameObject);
+        
         
         Upgrade.score += deathScore;
     }
+
+    public void UpgradeZombies()
+    {
+        ghealth += 1;
+        Debug.Log("health " + health);
+        
+        ZombieSpawn.HealthUpgrade = false;
+        
+    }
+        
 }

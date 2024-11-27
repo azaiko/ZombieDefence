@@ -3719,11 +3719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2240560737137325098, guid: a59992fc30c1dff44a0062d21efcfb79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.653
+      value: 4.25
       objectReference: {fileID: 0}
     - target: {fileID: 2240560737137325098, guid: a59992fc30c1dff44a0062d21efcfb79, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 2240560737137325098, guid: a59992fc30c1dff44a0062d21efcfb79, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3761,6 +3761,14 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2240560737137325100, guid: a59992fc30c1dff44a0062d21efcfb79, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5592964794439773550, guid: a59992fc30c1dff44a0062d21efcfb79, type: 3}
+      propertyPath: clearBehavior
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a59992fc30c1dff44a0062d21efcfb79, type: 3}
 --- !u!4 &4096739188853474584 stripped
@@ -3785,7 +3793,19 @@ PrefabInstance:
       value: CFXR2 Blood Shape Splash Variant
       objectReference: {fileID: 0}
     - target: {fileID: 892927422945788306, guid: 9084f2906859338428cf4cc3cac3ad57, type: 3}
+      propertyPath: cullingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 892927422945788306, guid: 9084f2906859338428cf4cc3cac3ad57, type: 3}
       propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 892927422945788306, guid: 9084f2906859338428cf4cc3cac3ad57, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 892927422945788306, guid: 9084f2906859338428cf4cc3cac3ad57, type: 3}
+      propertyPath: ClampVelocityModule.enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 892927422945788317, guid: 9084f2906859338428cf4cc3cac3ad57, type: 3}
@@ -3798,7 +3818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 892927422945788317, guid: 9084f2906859338428cf4cc3cac3ad57, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.262
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 892927422945788317, guid: 9084f2906859338428cf4cc3cac3ad57, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3834,11 +3854,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 892927424105787447, guid: 9084f2906859338428cf4cc3cac3ad57, type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3657685015844906543, guid: 9084f2906859338428cf4cc3cac3ad57, type: 3}
+      propertyPath: clearBehavior
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8806317218493724398, guid: 9084f2906859338428cf4cc3cac3ad57, type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9084f2906859338428cf4cc3cac3ad57, type: 3}

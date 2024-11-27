@@ -11,7 +11,11 @@ public class ZombieSpawn : MonoBehaviour
     private float _timer;
     public ParticleSystem spawn;
 
-    public static int currentEnemyCount = 0;  
+    public static int currentEnemyCount = 0;
+
+    public static bool SpeedUpgrade = false;
+    public static bool HealthUpgrade = false;
+    private List<GameObject> zombies = new List<GameObject>();
 
     void Start()
     {
@@ -31,6 +35,8 @@ public class ZombieSpawn : MonoBehaviour
     void Spawner()
     {
         _timer = timeSpawn;
+        zombies.Clear();
+        zombies.AddRange(GameObject.FindGameObjectsWithTag("Zombie"));
 
         if (currentEnemyCount < maxEnemy)
         {
@@ -39,7 +45,7 @@ public class ZombieSpawn : MonoBehaviour
             Instantiate(enemy, Random.insideUnitSphere * distance + transform.position, Quaternion.identity, transform);
             currentEnemyCount++;  
         }
-        else if(currentEnemyCount == maxEnemy && Attack.zombies.Count == 0)
+        else if(currentEnemyCount == maxEnemy && zombies.Count == 0)
         {
                 
             SpawnUpgrade();
@@ -48,6 +54,8 @@ public class ZombieSpawn : MonoBehaviour
 
     void SpawnUpgrade()
     {
+        SpeedUpgrade = true;
+        HealthUpgrade = true;
         currentEnemyCount = 0;
         maxEnemy += 5;
         timeSpawn -= 0.1f;

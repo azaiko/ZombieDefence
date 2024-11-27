@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Control : MonoBehaviour
 {
+    public static float gspeed = 10; 
     public float speed;
     public int spot = 0;
     public int next = 1;
@@ -14,6 +15,7 @@ public class Control : MonoBehaviour
 
     void Start()
     {
+        speed = gspeed;
         anim = GetComponent<Animator>();
         anim.SetBool("Run", true);
         anim.SetBool("Attack", false);
@@ -21,6 +23,11 @@ public class Control : MonoBehaviour
 
     void Update()
     {
+        if (ZombieSpawn.SpeedUpgrade)
+        {
+            UpgradeOfSpeed();
+        }
+        
         if (isAttacking)
         {
             return;
@@ -48,6 +55,13 @@ public class Control : MonoBehaviour
             
             spot += next;
         }
+    }
+
+    void UpgradeOfSpeed()
+    {
+        gspeed += 0.1f;
+        Debug.Log("speed upgraded " + speed);
+        ZombieSpawn.SpeedUpgrade = false;
     }
 
 }
