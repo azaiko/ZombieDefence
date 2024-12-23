@@ -11,6 +11,7 @@ public class ZombieAttack : MonoBehaviour
     {
         
         CastleAttack castle = other.GetComponent<CastleAttack>();
+        //Debug.Log("getCastle");
         if (castle != null)
         {
             Debug.Log("attack");

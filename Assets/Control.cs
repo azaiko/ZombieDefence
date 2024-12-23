@@ -11,6 +11,7 @@ public class Control : MonoBehaviour
     public int next = 1;
     public Transform[] spots;
     private Animator anim;
+    //private Animation anim2;
     private bool isAttacking = false;
 
     void Start()
@@ -19,6 +20,8 @@ public class Control : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.SetBool("Run", true);
         anim.SetBool("Attack", false);
+        // anim2 = GetComponent<Animation>();
+        // anim2.Play("Walk");
     }
 
     void Update()
@@ -42,6 +45,7 @@ public class Control : MonoBehaviour
         {
             if (spot == spots.Length - 1)
             {
+                // anim2.Play("Attack");
                 anim.SetBool("Attack", true);
                 anim.SetBool("Run", false);
                 isAttacking = true;
@@ -60,7 +64,7 @@ public class Control : MonoBehaviour
     void UpgradeOfSpeed()
     {
         gspeed += 0.1f;
-        Debug.Log("speed upgraded " + speed);
+       //Debug.Log("speed upgraded " + speed);
         ZombieSpawn.SpeedUpgrade = false;
     }
 

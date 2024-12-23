@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\TakeDamage.cs" />
+     <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
@@ -55,6 +56,7 @@
      <Compile Include="Assets\Attack.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\DitheringComponent.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\PostProcessingComponent.cs" />
+     <Compile Include="Assets\PauseMenu.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\BloomModel.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -83,6 +85,7 @@
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\UserLutComponent.cs" />
      <Compile Include="Assets\ZombieSpawn.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
+     <Compile Include="Assets\EndMenu.cs" />
      <Compile Include="Assets\Upgrade.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
@@ -92,6 +95,7 @@
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
+     <Compile Include="Assets\TurretInfoUI.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\FogComponent.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
@@ -105,6 +109,7 @@
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <Folder Include="Assets\Zombie" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Textures\Lens Dirt" />
+     <Folder Include="Assets\NekoLegends\Clothing" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
      <Folder Include="Assets\Hyper casual cartoon castles\Prefab\Objects" />
@@ -162,6 +167,7 @@
      <Folder Include="Assets\Hyper casual cartoon castles\Prefab\RoadConstructor" />
      <Folder Include="Assets\UI Toolkit\UnityThemes" />
      <Folder Include="Assets\Sci Fi Assets\Simple SciFi Gun Turret Set\Additional Assets" />
+     <Folder Include="Assets\Spiders\Animations" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
      <Folder Include="Assets\Hyper casual cartoon castles" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -171,6 +177,7 @@
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Walls\Simple" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Floors" />
      <Folder Include="Assets\TextMesh Pro" />
+     <Folder Include="Assets\Spiders\Textures" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Decorative elements\Column" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Magic Misc" />
@@ -213,6 +220,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Textures\LUTs" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Models" />
+     <None Include="Assets\NekoLegends\Clothing\Backgrounds\Readme.txt" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Doors" />
      <Folder Include="Assets\Sci Fi Assets\Simple SciFi Gun Turret Set" />
      <Folder Include="Assets\Hyper casual cartoon castles\Prefab\Castles" />
@@ -242,6 +250,7 @@
      <None Include="Assets\Sci Fi Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Runtime" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Utilities\CustomMotionTexture" />
+     <Folder Include="Assets\Spiders\Prefabs" />
      <Folder Include="Assets\Hyper casual cartoon castles\Models\Castles\BigCstle" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Electric" />
@@ -252,8 +261,10 @@
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\Uber.shader" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <Folder Include="Assets\Spiders\Models" />
      <None Include="Assets\Sci Fi Assets\Simple SciFi Gun Turret Set\Read Me.txt" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\TAA.shader" />
+     <Folder Include="Assets\Spiders" />
      <Folder Include="Assets\Sci Fi Assets\Simple SciFi Gun Turret Set\Additional Assets\Materials" />
      <Folder Include="Assets\Hyper casual cartoon castles\Prefab\Castles\SmallCastle" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Stairs" />
@@ -268,6 +279,7 @@
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Materials" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <Folder Include="Assets\NekoLegends\Clothing\Backgrounds" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs" />
      <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
@@ -275,6 +287,7 @@
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders" />
+     <Folder Include="Assets\NekoLegends" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Graphics" />
      <None Include="Assets\Sci-Fi Styled Modular Pack\Readme.txt" />
@@ -287,6 +300,7 @@
      <Folder Include="Assets\Hyper casual cartoon castles\Prefab\Castles\BigCastle" />
      <Folder Include="Assets\Hyper casual cartoon castles\Prefab" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <Folder Include="Assets\Spiders\Materials" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Editor Resources\UI" />
      <Folder Include="Assets\Sci-Fi Styled Modular Pack\Prefabs\Decorative elements\Tables" />
      <Folder Include="Assets\Sci Fi Assets\PostProcessing\Utilities\CustomMotionTexture\Models" />

@@ -13,6 +13,7 @@ public class TakeDamage : MonoBehaviour
     public int health;
 
     public int deathScore = 10;
+    private Animation anim;
     
     public ParticleSystem damageParticles;
     public ParticleSystem deathParticles;
@@ -22,6 +23,7 @@ public class TakeDamage : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animation>();
         health = ghealth;
 
         if (healthSlider)
@@ -42,7 +44,7 @@ public class TakeDamage : MonoBehaviour
     {
         canvas.enabled = true;
         health -= damage;
-        damageParticles.Play();
+        //damageParticles.Play();
         
 
         if(healthSlider) healthSlider.value = health;
@@ -54,9 +56,7 @@ public class TakeDamage : MonoBehaviour
 
     public void Die()
     {
-        // deathParticles.transform.parent = null;
-        // deathParticles.Play();
-        // Destroy(deathParticles.gameObject, deathParticles.main.duration);
+        //anim.Play("Die");
         Destroy(gameObject);
         
         

@@ -299,6 +299,7 @@ MonoBehaviour:
   attackRange: 1000
   attackDamage: 10
   attackRate: 1
+  turret: {fileID: 4000012047928590}
 --- !u!65 &2594981802623067031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -310,8 +311,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 7, z: 10}
-  m_Center: {x: 0, y: 4, z: 0}
+  m_Size: {x: 11.448878, y: 9.399533, z: 12.085114}
+  m_Center: {x: 0.72443914, y: 5.1997666, z: 0.17047119}
 --- !u!1 &1000012338640140
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,14 +9,23 @@ public class Attack : MonoBehaviour
     public int attackDamage = 10; // Урон от атаки
     public float attackRate = 1f;    // Частота атак (время между выстрелами)
 
+    [SerializeField] private Transform turret;
+
     private Transform currentTarget; // Текущая цель (зомби)
     private float lastAttackTime;    // Время последней атаки
     public static List<GameObject> zombies = new List<GameObject>();
 
+    private TurretInfoUI updateUI;
+
     void Start()
     {
         UpdateZombieList();
-        
+        updateUI = FindObjectOfType<TurretInfoUI>();
+        if (updateUI == null)
+        {
+            Debug.LogError("TurretInfoUI not found on the scene!");
+        }
+
     }
     
     void FixedUpdate()
@@ -28,7 +38,20 @@ public class Attack : MonoBehaviour
             RotateTurret();
             AttackEnemy();
         }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit) && hit.transform == transform)
+            {
+                updateUI.ShowPannel(this);
+                
+                
+            }
+        }
     }
+    
 
     void UpdateZombieList()
     {
@@ -79,9 +102,8 @@ public class Attack : MonoBehaviour
         // Рассчитываем целевую ориентацию (только горизонтально)
         Quaternion targetRotation = Quaternion.LookRotation(direction);
 
-        transform.rotation = targetRotation * Quaternion.Euler(0f, 270f, 0f);
-
-        //Debug.Log($"Turret rotating towards {currentTarget.name}");
+        turret.rotation = targetRotation * Quaternion.Euler(0f, 270f, 0f);
+        
     }
 
 
@@ -91,7 +113,6 @@ public class Attack : MonoBehaviour
     
         if (Time.time - lastAttackTime >= 1f / attackRate)
         {
-            //Debug.Log($"Turret attacking enemy: {currentTarget.name} with damage {attackDamage}");
             
             TakeDamage enemy = currentTarget.GetComponent<TakeDamage>();
             if (enemy != null)
