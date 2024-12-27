@@ -14,7 +14,7 @@ public class TurretInfoUI : MonoBehaviour
 
     public TMP_Text attackRange;
 
-    private Upgrade currentTurret;
+    public GameObject selectedTurret;
     
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class TurretInfoUI : MonoBehaviour
 
     public void ShowPannel(Attack turret)
     {
-        
+        selectedTurret = turret.gameObject;
         damage.text = "Damage: " + turret.attackDamage;
         attackRate.text = "Attack rate: " + turret.attackRate;
         attackRange.text = "Attack range: " + turret.attackRange;
@@ -33,7 +33,14 @@ public class TurretInfoUI : MonoBehaviour
         
     }
 
-    
+    public void UpdateTurret()
+    {
+        if (selectedTurret != null)
+        {
+            TUpgrade turretUp = selectedTurret.GetComponent<TUpgrade>();
+            turretUp.UpgradeTurret(selectedTurret);
+        }
+    }
 
     public void HideInfo()
     {

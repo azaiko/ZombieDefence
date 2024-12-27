@@ -60,7 +60,7 @@ public class TakeDamage : MonoBehaviour
         Destroy(gameObject);
         
         
-        Upgrade.score += deathScore;
+        CastleAttack.score += deathScore;
     }
 
     public void UpgradeZombies()

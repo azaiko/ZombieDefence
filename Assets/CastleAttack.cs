@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class CastleAttack : MonoBehaviour
 {
+    public static int score = 50;
+    [SerializeField] Text scoreText;
     public int health = 1000;
     public Text healthText;
     public static bool isAlive = true;
@@ -12,6 +14,12 @@ public class CastleAttack : MonoBehaviour
     void Start()
     {
         healthText.text = "Health: " + health;
+        score = 50;
+    }
+
+    void Update()
+    {
+        scoreText.text = "Score: " + score;
     }
     public void TakeDamage(int damage)
     {

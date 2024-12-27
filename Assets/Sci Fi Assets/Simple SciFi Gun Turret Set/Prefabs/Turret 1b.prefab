@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 4000010324646232}
   - component: {fileID: 1408979385649222391}
   - component: {fileID: -7580261562907651988}
+  - component: {fileID: -7295245420988745209}
   m_Layer: 0
   m_Name: Turret 1b
   m_TagString: Turret
@@ -318,6 +319,21 @@ MonoBehaviour:
   attackDamage: 15
   attackRate: 0.9
   turret: {fileID: 4000013728231090}
+--- !u!114 &-7295245420988745209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012258839112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ef01b0339b20d4881565ab916a9dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turret1b: {fileID: 1000012258839112}
+  Turret1c: {fileID: 1000010378282670, guid: 913c474af4fed6e45bc3725b21e84f11, type: 3}
+  Turret1d: {fileID: 1000011222192992, guid: 9b3a643ca887918468955b42c4531666, type: 3}
 --- !u!1 &1000013319699188
 GameObject:
   m_ObjectHideFlags: 0

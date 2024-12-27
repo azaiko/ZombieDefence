@@ -61,7 +61,7 @@ public class TurretSpawn : MonoBehaviour
                     {
                         GameObject objectToCreate = Instantiate(TurretPrefab, hitObject.transform.position, Quaternion.identity);
                         objectToCreate.name = "Turret 1a";
-                        Upgrade.score -= fturretCost;
+                        CastleAttack.score -= fturretCost;
                     }
                       
                 }

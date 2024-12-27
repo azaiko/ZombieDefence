@@ -3992,7 +3992,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f59105a9be1d6e4aa939deae30fa68a, type: 3}
   m_Name: 
@@ -5200,6 +5200,7 @@ MonoBehaviour:
   damage: {fileID: 2131790135}
   attackRate: {fileID: 144174232}
   attackRange: {fileID: 795949760}
+  selectedTurret: {fileID: 0}
 --- !u!4 &1448640175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 439240, guid: 548a40efc092c6f408cc4d1691b171cc, type: 3}
@@ -5500,7 +5501,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1502805110}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1434987644}
+        m_TargetAssemblyTypeName: TurretInfoUI, Assembly-CSharp
+        m_MethodName: UpdateTurret
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1502805110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5574,6 +5587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab79487a4389c34eba132b616322cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 1102500326}
   health: 1000
   healthText: {fileID: 888938888}
 --- !u!54 &1545984581
@@ -6831,7 +6845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2076509124
 RectTransform:
   m_ObjectHideFlags: 0

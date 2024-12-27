@@ -406,6 +406,7 @@
 "Assets/Sci Fi Assets/Simple SciFi Gun Turret Set/Scripts/CameraMouseRotate.cs"
 "Assets/Sci Fi Assets/Simple SciFi Gun Turret Set/Scripts/MoveMe.cs"
 "Assets/TakeDamage.cs"
+"Assets/TUpgrade.cs"
 "Assets/TurretInfoUI.cs"
 "Assets/TurretSpawn.cs"
 "Assets/Upgrade.cs"
