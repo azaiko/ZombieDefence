@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class TurretInfoUI : MonoBehaviour
 {
-    public GameObject UpdateUI;
+    [SerializeField] private GameObject UpdateUI;
 
     public TMP_Text damage;
 

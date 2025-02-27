@@ -5,31 +5,18 @@ using UnityEngine.UI;
 
 public class CastleAttack : MonoBehaviour
 {
-    public static int score = 50;
-    [SerializeField] Text scoreText;
     public int health = 1000;
-    public Text healthText;
+    //public Text healthText;
     public static bool isAlive = true;
 
     void Start()
     {
-        healthText.text = "Health: " + health;
-        score = 50;
+        GameManager.instance.uiController.UpdateHealth(health);
     }
-
-    void Update()
-    {
-        scoreText.text = "Score: " + score;
-    }
+    
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        
-        if (health <= 0)
-        {
-            Die();
-        }
-        healthText.text = "Health: " + health;   
+        GameManager.instance.TakeDamage(damage);
     }
 
     public void Die()

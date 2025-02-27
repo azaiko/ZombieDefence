@@ -88,7 +88,8 @@ public class ZombieSpawn : MonoBehaviour
     {
         for (int i = 0; i < count; i++)
         {
-            Instantiate(spider, Random.insideUnitSphere * distance + transform.position, Quaternion.identity, transform);
+            GameObject spawnSpider =Instantiate(spider, Random.insideUnitSphere * distance + transform.position, Quaternion.identity, transform);
+            spawnSpider.transform.Rotate(0f, 180f, 0f);
         }
     }
 

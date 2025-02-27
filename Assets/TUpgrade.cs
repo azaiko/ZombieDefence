@@ -32,40 +32,6 @@ public class TUpgrade : MonoBehaviour
 
     }
     
-    void Update()
-    {
-        // scoreText.text = "Score: " + score;
-        // if(canUpgrade) CheckUpgradeTurret();
-        
-    }
-
-    void EnabledUpgradeMode()
-    {
-        //canUpgrade = true;
-         //CheckUpgradeTurret();
-    }
-
-    // void CheckUpgradeTurret()
-    // {
-    //     //Debug.Log("Checking Upgrade Turret" + canUpgrade);
-    //     if (Input.GetMouseButtonDown(0))
-    //     {
-    //         //Debug.Log("got ray");
-    //         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //         if (Physics.Raycast(ray, out RaycastHit hit))
-    //         {
-    //             //Debug.Log(hit.collider.gameObject.name);
-    //             GameObject selectedTurret = hit.collider.gameObject;
-    //             if (selectedTurret.CompareTag("Turret"))
-    //             {
-    //                 //Debug.Log("Selected Turret" + selectedTurret.name);
-    //                 UpgradeTurret(selectedTurret);
-    //                 
-    //             }
-    //         }
-    //     }
-    //     
-    // }
 
     public void UpgradeTurret(GameObject currentTurret)
     {
@@ -84,9 +50,9 @@ public class TUpgrade : MonoBehaviour
             string nextTurretName = keys[currentIndex+1];
             int nextTurretCost = (int)Turrets[nextTurretName];
 
-            if (CastleAttack.score >= nextTurretCost)
+            if (GameManager.instance.currentScore >= nextTurretCost)
             {
-                CastleAttack.score -= nextTurretCost;
+                GameManager.instance.AddScore(-nextTurretCost);
                 ReplaceTurret(currentTurret, nextTurretName);
                 Debug.Log(currentTurret.name);
                 nextTurretName += "(Clone)";

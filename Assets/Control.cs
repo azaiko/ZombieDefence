@@ -21,7 +21,8 @@ public class Control : MonoBehaviour
         anim.SetBool("Run", true);
         anim.SetBool("Attack", false);
         // anim2 = GetComponent<Animation>();
-        // anim2.Play("Walk");
+        // anim2.Play("Walk");  
+        
     }
 
     void Update()

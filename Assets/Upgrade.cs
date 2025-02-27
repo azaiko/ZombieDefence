@@ -33,6 +33,7 @@ public class Upgrade : MonoBehaviour
     
     void Update()
     {
+        
         scoreText.text = "Score: " + score;
         if(canUpgrade) CheckUpgradeTurret();
         

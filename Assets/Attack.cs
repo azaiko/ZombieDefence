@@ -66,7 +66,7 @@ public class Attack : MonoBehaviour
 
         foreach (GameObject zombie in zombies)
         {
-            if (zombie != null) // Проверка на null
+            if (zombie != null) 
             {
                 float distance = Vector3.Distance(transform.position, zombie.transform.position);
                 if (distance <= attackRange && distance < closestDistance)
@@ -99,7 +99,7 @@ public class Attack : MonoBehaviour
             return;
         }
 
-        // Рассчитываем целевую ориентацию (только горизонтально)
+        // Рассчитываем целевую ориентацию
         Quaternion targetRotation = Quaternion.LookRotation(direction);
 
         turret.rotation = targetRotation * Quaternion.Euler(0f, 270f, 0f);

@@ -57,11 +57,11 @@ public class TurretSpawn : MonoBehaviour
 
                 if (canSpawn)
                 {
-                    if (fturretCost <= Upgrade.score)
+                    if (fturretCost <= GameManager.instance.currentScore)
                     {
                         GameObject objectToCreate = Instantiate(TurretPrefab, hitObject.transform.position, Quaternion.identity);
                         objectToCreate.name = "Turret 1a";
-                        CastleAttack.score -= fturretCost;
+                        GameManager.instance.AddScore(-fturretCost);
                     }
                       
                 }

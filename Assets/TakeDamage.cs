@@ -59,8 +59,7 @@ public class TakeDamage : MonoBehaviour
         //anim.Play("Die");
         Destroy(gameObject);
         
-        
-        CastleAttack.score += deathScore;
+        GameManager.instance.AddScore(deathScore);
     }
 
     public void UpgradeZombies()

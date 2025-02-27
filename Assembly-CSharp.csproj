@@ -71,6 +71,7 @@
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
+     <Compile Include="Assets\UIController.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\VignetteComponent.cs" />
@@ -80,9 +81,12 @@
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\GrainModel.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\PostProcessingModel.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\GrainComponent.cs" />
+     <Compile Include="Assets\TurretManager.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\UserLutModel.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
+     <Compile Include="Assets\TUpgrade.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\UserLutComponent.cs" />
+     <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\ZombieSpawn.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
      <Compile Include="Assets\EndMenu.cs" />
@@ -101,7 +105,6 @@
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Sci Fi Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
-     <Compile Include="Assets\TUpgrade.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Hyper casual cartoon castles\Models" />
      <Folder Include="Assets\Hyper casual cartoon castles\Texture" />
