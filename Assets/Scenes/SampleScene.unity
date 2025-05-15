@@ -3158,7 +3158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.7, y: 86.3}
+  m_AnchoredPosition: {x: 1, y: 86}
   m_SizeDelta: {x: 120, y: 39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710365344
@@ -4922,11 +4922,11 @@ MonoBehaviour:
   spider: {fileID: 8688803186435683820, guid: fd02805ee801de64a828e8190cac7784, type: 3}
   timeSpawn: 1
   maxEnemy: 5
-  distance: 1
+  distance: 2
   spiderCount: 1
   ghoulCount: 1
   spawn: {fileID: 339564428}
-  wave: 5
+  wave: 1
 --- !u!4 &1408637949
 Transform:
   m_ObjectHideFlags: 0

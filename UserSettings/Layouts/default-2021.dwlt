@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 123
+  controlID: 113
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 545
     height: 554
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -403,18 +403,18 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 36fbffffc05800006c590000e6590000f6590000
+      m_ExpandedIDs: 36fbffffc0580000e6590000045a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Black Widow(Clone)
-        m_OriginalName: Black Widow(Clone)
+        m_Name: GameObject
+        m_OriginalName: GameObject
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -59894
+        m_UserData: 23014
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -685,9 +685,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -56.221558, y: 0.42467397, z: 73.48328}
+    m_Target: {x: -85.72417, y: 89.83755, z: -32.16569}
     speed: 2
-    m_Value: {x: -56.22175, y: 0.36768705, z: 84.17836}
+    m_Value: {x: -85.72417, y: 89.83755, z: -32.16569}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -734,13 +734,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.04651277, y: -0.87013143, z: 0.08417848, w: -0.48361596}
+    m_Target: {x: -0.2629802, y: -0.5194453, z: 0.17235799, w: -0.7947238}
     speed: 2
-    m_Value: {x: -0.046506666, y: -0.87001723, z: 0.08416743, w: -0.4835525}
+    m_Value: {x: -0.26320222, y: -0.5181813, z: 0.17193969, w: -0.79539263}
   m_Size:
-    m_Target: 6.226841
+    m_Target: 10.13573
     speed: 2
-    m_Value: 6.234322
+    m_Value: 10.61333
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -904,22 +904,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Spiders/Prefabs
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Spiders/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\\u0410\u043B\u0435\u043A\u0441\u0435\u0439\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\ZombieDefence"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 40}
-    m_SelectedIDs: 487b0000
-    m_LastClickedID: 31560
-    m_ExpandedIDs: 00000000666300008c6300009063000098630000d2630000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 8c630000
+    m_LastClickedID: 25484
+    m_ExpandedIDs: 0000000062630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -947,7 +947,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000066630000
+    m_ExpandedIDs: 0000000062630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
