@@ -4,17 +4,19 @@ public class GameManager : MonoBehaviour
 {
     
     [Header("Game Settings")]
-    public int initialScore = 50; // Начальное количество очков
-    public int playerHealth = 1000; // Здоровье игрока
-    public int waveNumber = 1; // Номер текущей волны
+    public int initialScore = 50;
+    public int playerHealth = 1000;
+    public int waveNumber = 1;
+    public int killedZombies = 0;
+    private bool gameOver = false;
 
     [Header("Game State")]
     public int currentScore; 
     public int currentHealth;
 
-     [Header("References")]
-     public UIController uiController; // Ссылка на UIController
-     public TurretManager turretManager; // Ссылка на менеджер турелей
+    [Header("References")]
+    public UIController uiController;
+     public TurretManager turretManager;
     public static GameManager instance { get; private set; }
 
 
@@ -33,6 +35,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        
+        if (uiController == null)
+        {
+            uiController = FindObjectOfType<UIController>();
+        }
+        
         currentScore = initialScore;
         currentHealth = playerHealth;
         
@@ -44,6 +52,7 @@ public class GameManager : MonoBehaviour
     {
         currentScore += amount;
         uiController.UpdateScore(currentScore);
+        killedZombies += 1;
     }
 
     public void TakeDamage(int damage)
@@ -63,6 +72,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        if (gameOver) return;
+        gameOver = true;
         Debug.Log("Game Over!");
         if (FindObjectOfType<CastleAttack>() != null)
         {

@@ -54,7 +54,7 @@ public class ZombieSpawn : MonoBehaviour
          if (currentEnemyCount == maxEnemy && zombies.Count == 0)
         {
             SpawnUpgrade();
-            spidersSpawned = false; // Сбрасываем флаги после перехода на новую волну
+            spidersSpawned = false;
             bossSpawned = false;
         }
 
@@ -89,7 +89,7 @@ public class ZombieSpawn : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             GameObject spawnSpider =Instantiate(spider, Random.insideUnitSphere * distance + transform.position, Quaternion.identity, transform);
-            spawnSpider.transform.Rotate(0f, 180f, 0f);
+            //spawnSpider.transform.Rotate(0f, 180f, 0f);
         }
     }
 

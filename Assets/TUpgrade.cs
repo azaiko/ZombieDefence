@@ -6,15 +6,11 @@ using UnityEngine.UI;
 
 public class TUpgrade : MonoBehaviour
 {
-    // public static int score = 50;
-    // [SerializeField] Text scoreText;
-    //[SerializeField] Button upgradeButton;
     [SerializeField] private GameObject Turret1b;
     [SerializeField] private GameObject Turret1c;
     [SerializeField] private GameObject Turret1d;
 
     private TurretInfoUI updateUI;
-    //public static bool canUpgrade;
 
     public OrderedDictionary  Turrets = new OrderedDictionary()
     {
@@ -26,8 +22,6 @@ public class TUpgrade : MonoBehaviour
     
     void Start()
     {
-        //score = 50;
-        //upgradeButton.onClick.AddListener(EnabledUpgradeMode);
         updateUI = FindObjectOfType<TurretInfoUI>();
 
     }
@@ -64,7 +58,6 @@ public class TUpgrade : MonoBehaviour
         }
         else Debug.Log("Турель не может быть улучшена");
         
-        //canUpgrade = false;
     }
 
     void ReplaceTurret(GameObject currentTurret, string newTurretName)

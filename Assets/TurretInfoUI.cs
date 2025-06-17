@@ -16,11 +16,6 @@ public class TurretInfoUI : MonoBehaviour
 
     public GameObject selectedTurret;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        //UpdateUI.SetActive(false);
-    }
 
     public void ShowPannel(Attack turret)
     {

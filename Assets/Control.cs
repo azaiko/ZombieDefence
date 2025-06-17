@@ -11,7 +11,6 @@ public class Control : MonoBehaviour
     public int next = 1;
     public Transform[] spots;
     private Animator anim;
-    //private Animation anim2;
     private bool isAttacking = false;
 
     void Start()
@@ -20,8 +19,6 @@ public class Control : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.SetBool("Run", true);
         anim.SetBool("Attack", false);
-        // anim2 = GetComponent<Animation>();
-        // anim2.Play("Walk");  
         
     }
 

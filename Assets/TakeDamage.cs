@@ -44,7 +44,6 @@ public class TakeDamage : MonoBehaviour
     {
         canvas.enabled = true;
         health -= damage;
-        //damageParticles.Play();
         
 
         if(healthSlider) healthSlider.value = health;
@@ -56,7 +55,6 @@ public class TakeDamage : MonoBehaviour
 
     public void Die()
     {
-        //anim.Play("Die");
         Destroy(gameObject);
         
         GameManager.instance.AddScore(deathScore);

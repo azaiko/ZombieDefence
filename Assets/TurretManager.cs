@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TurretManager : MonoBehaviour
 {
-    public List<GameObject> turrets = new List<GameObject>();
 
     public void UpgradeTurret(GameObject turret)
     {

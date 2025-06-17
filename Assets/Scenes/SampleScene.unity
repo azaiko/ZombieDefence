@@ -649,7 +649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &124172183
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3709,8 +3709,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialScore: 50
-  playerHealth: 100
+  playerHealth: 1000
   waveNumber: 1
+  killedZombies: 0
   currentScore: 0
   currentHealth: 0
   uiController: {fileID: 1612026206}
@@ -3810,7 +3811,6 @@ GameObject:
   m_Component:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
-  - component: {fileID: 963194230}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
   m_Layer: 0
@@ -3900,23 +3900,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurretPrefab: {fileID: 1000012174300454, guid: 8a4fca54c9faa3449bcff12193992420, type: 3}
   spawnRadius: 15
---- !u!114 &963194230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f59105a9be1d6e4aa939deae30fa68a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1102500326}
-  upgradeButton: {fileID: 1502805109}
-  Turret1b: {fileID: 1000012258839112, guid: c36865a7da8627b42a5d8dae1b1a98bb, type: 3}
-  Turret1c: {fileID: 1000010378282670, guid: 913c474af4fed6e45bc3725b21e84f11, type: 3}
-  Turret1d: {fileID: 1000011222192992, guid: 9b3a643ca887918468955b42c4531666, type: 3}
 --- !u!1 &991861957
 GameObject:
   m_ObjectHideFlags: 0
@@ -4926,7 +4909,7 @@ MonoBehaviour:
   spiderCount: 1
   ghoulCount: 1
   spawn: {fileID: 339564428}
-  wave: 1
+  wave: 5
 --- !u!4 &1408637949
 Transform:
   m_ObjectHideFlags: 0
@@ -5045,7 +5028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9fe59675e206540a5612d8df121c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turrets: []
 --- !u!4 &1424333548
 Transform:
   m_ObjectHideFlags: 0
@@ -5547,7 +5529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab79487a4389c34eba132b616322cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
 --- !u!54 &1545984581
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6085,8 +6066,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6121,7 +6102,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -43.48288, y: -57.772247, z: -62.074097, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6598,6 +6579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPannel: {fileID: 150939367}
+  GameOverText: {fileID: 1767320039}
 --- !u!114 &2015502403
 MonoBehaviour:
   m_ObjectHideFlags: 0

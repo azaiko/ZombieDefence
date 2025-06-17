@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class CastleAttack : MonoBehaviour
 {
-    public int health = 1000;
-    //public Text healthText;
+    
     public static bool isAlive = true;
 
     void Start()
     {
-        GameManager.instance.uiController.UpdateHealth(health);
+        isAlive = true;
     }
     
     public void TakeDamage(int damage)
